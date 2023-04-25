@@ -1,4 +1,5 @@
 .DS_Store
+/Code/base_code.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
