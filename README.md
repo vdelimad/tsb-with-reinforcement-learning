@@ -1,2 +1,2 @@
-# reinforcement-learning-causality
+# Travelling Salesman Problem with Reinforcement Learning 
 ANLY591 Project
