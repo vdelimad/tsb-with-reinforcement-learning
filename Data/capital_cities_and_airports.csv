@@ -1,0 +1,47 @@
+﻿country,capital_city,capital_latitude,capital_longitude,airport_iata,airport_name
+Afghanistan,Kabul,34.5167,69.1833,KBL,Hamid Karzai International Airport
+Armenia,Yerevan,40.1812,44.5136,EVN,Zvartnots International Airport 
+Azerbaijan,Baku,40.3953,49.8622,GYD,Heydar Aliyev International Airport
+Bahrain,Manama,26.2361,50.5831,BAH,Bahrain International Airport
+Bangladesh,Dhaka,23.7231,90.4086,DAC,Hazrat Shahjalal International Airport
+Bhutan,Thimphu,27.473,89.639,PBH,Paro International Airport
+Brunei,Bandar Seri Begawan,4.8833,114.9333,BWN,Brunei International Airport
+Cambodia,Phnom Penh,11.55,104.9166,PNH,Phnom Penh International Airport
+China,Beijing,39.9289,116.3883,PEK,Beijing Capital International Airport
+Cyprus,Nicosia,35.1667,33.3666,ECN,Ercan International Airport
+East Timor,Dili,-8.5594,125.5795,DIL,Presidente Nicolau Lobato International Airport
+Georgia,Tbilisi,41.725,44.7908,TBS,Tbilisi International Airport
+India,New Delhi,28.6,77.2,DEL,Indira Gandhi International Airport
+Indonesia,Jakarta,-6.1744,106.8294,CGK,Soekarno–Hatta International Airport
+Iran,Tehran,35.6719,51.4243,IKA,Imam Khomeini International Airport
+Iraq,Baghdad,33.3386,44.3939,BGW,Baghdad International Airport
+Israel,Jerusalem,31.7784,35.2066,JRS,Jerusalem International Airport
+Japan,Tokyo,35.685,139.7514,NRT,Narita International Airport
+Jordan,Amman,31.95,35.9333,AMM,Queen Alia International Airport
+Kazakhstan,Nursultan,51.1811,71.4278,NQZ,Nursultan Nazarbayev International Airport
+Kuwait,Kuwait City,29.3697,47.9783,KWI,Kuwait International Airport
+Kyrgyzstan,Bishkek,42.8731,74.5852,FRU,Manas International Airport
+Laos,Vientiane,17.9667,102.6,VTE,Wattay International Airport
+Lebanon,Beirut,33.872,35.5097,BEY,Beirut–Rafic Hariri International Airport
+Malaysia,Kuala Lumpur,3.1667,101.7,KUL,Kuala Lumpur International Airport
+Maldives,Male,4.1667,73.4999,MLE,Velana International Airport
+Mongolia,Ulaanbaatar,47.9167,106.9166,UBN,Chinggis Khaan International Airport
+Myanmar,Nay Pyi Taw,19.7666,96.1186,NYT,Nay Pyi Taw International Airport
+Nepal,Kathmandu,27.7167,85.3166,KTM,Tribhuvan International Airport
+Oman,Muscat,23.6133,58.5933,MCT,Muscat International Airport
+Pakistan,Islamabad,33.7,73.1666,ISB,Islamabad International Airport
+Philippines,Manila,14.6042,120.9822,MNL,Ninoy Aquino International Airport
+Qatar,Doha,25.2866,51.533,DOH,Hamad International Airport
+Saudi Arabia,Riyadh,24.6408,46.7727,RUH,King Khalid International Airport
+Singapore,Singapore,1.293,103.8558,SIN,Changi Airport
+South Korea,Seoul,37.5663,126.9997,ICN,Incheon International Airport
+Sri Lanka,Colombo,6.932,79.8578,CMB,Bandaranaike International Airport
+Syria,Damascus,33.5,36.3,DAM,Damascus International Airport
+Taiwan,Taipei,25.0358,121.5683,TPE,Taoyuan International Airport
+Tajikistan,Dushanbe,38.56,68.7739,DYU,Dushanbe International Airport
+Thailand,Bangkok,13.75,100.5166,BKK,Suvarnabhumi Airport
+Turkey,Ankara,39.9272,32.8644,ESB,Ankara Esenboga Airport
+Turkmenistan,Ashgabat,37.95,58.3833,ASB,Ashgabat International Airport
+United Arab Emirates,Abu Dhabi,24.4667,54.3666,AUH,Abu Dhabi International Airport
+Uzbekistan,Tashkent,41.3117,69.2949,TAS,Islam Karimov Tashkent International Airport
+Vietnam,Hanoi,21.0333,105.85,HAN,Noi Bai International Airport
