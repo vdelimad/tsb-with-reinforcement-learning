@@ -1,5 +1,6 @@
 .DS_Store
 /Data/skyscanner_auth.txt
+/Data/FlightAPIData/
 /Code/base_code.ipynb
 
 # Byte-compiled / optimized / DLL files
