@@ -5,3 +5,7 @@
 h1, h2, h3, h4, h5, h6 {
   text-transform: none !important;
 }
+.title-slide h1 {
+  font-size: calc(2.5em / 0.7)*1.5 !important;
+  text-align: center;
+}
