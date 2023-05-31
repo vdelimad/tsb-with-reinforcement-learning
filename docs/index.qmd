@@ -100,7 +100,15 @@ IFrame(src='resources/Outputs/Plots/map_of_airport_locations.html', width=width_
 
 We collected these countries' flight prices, duration, and stopover data using the SkyScanner API [@skyscanner_api_2023]. We made several simplifying assumptions in the data collection. We only obtained data for the single, arbitrary date of 22 May 2023. Also, the data does not  include the layover time between segments, only the in-flight time^[For clarification, we cannot take the difference between the first segment departure and last segment arrival to calculate the total itinerary time because flight data is provided in local time, which would not account for time zone changes.]. Lastly, the data collected only corresponds to economy cabin class. Relaxation of these assumptions can be explored in future work.
 
-Given the 42 airports, we completed three transition matrices with 1,722 non-zero entries, each matrix corresponding to either flight price, duration, or stopover information. The entries correspond to each of the $42 \times 42$ transitions minus the diagonal, which would correspond to traveling from an airport to itself ($42 * 42 - 42 = 1,722$). The search resulted in 38,236 segments, narrowed to 15,396 itineraries, and narrowed to the 1,722 'best' flights. To choose the ‘best’ flight, we used the heuristic of valuing each flight hour at $20 and every stopover at $50, resulting in $\rm best \, price =  fare + flight \,time * 20 + stops * 50$. @fig-airport-links shows color-coded prices between airports.
+Given the 42 airports, we completed three transition matrices with 1,722 non-zero entries, each matrix corresponding to either flight price, duration, or stopover information. The entries correspond to each of the $42 \times 42$ transitions minus the diagonal, which would correspond to traveling from an airport to itself ($42 * 42 - 42 = 1,722$). The search resulted in 38,236 segments, narrowed to 15,396 itineraries, and narrowed to the 1,722 'best' flights. To choose the ‘best’ flight, we used the heuristic of valuing each flight hour at $20 and every stopover at $50, resulting in:
+
+$$ 
+\begin{align}\begin{aligned} \rm best \, price =  fare + flight \,time * 20 \\\begin{split} \rm + stops * 50 
+\end{split}\end{aligned}\end{align} 
+$$ {#eq-best-flight}
+
+
+@fig-airport-links shows color-coded prices between airports.
 
 
 ```{python}
