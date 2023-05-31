@@ -8,7 +8,7 @@ date: '2023-04-27'
 format:
   html:
     theme:
-      - superhero
+      - cosmo
       - custom.scss
     toc: true
     code-copy: true
@@ -20,7 +20,9 @@ csl: council-of-science-editors-brackets.csl
 ---
 
 ::: {.callout-note appearance="simple"}
-All code used in this report is publicly available on [GitHub](https://github.com/vdelimad/tsb-with-reinforcement-learning).
+* All code used in this report is publicly available on [GitHub](https://github.com/vdelimad/tsb-with-reinforcement-learning).
+* To explore more of my work, please visit my [website](https://victordelima.com/).
+
 ::: 
 
 
