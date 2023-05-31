@@ -19,7 +19,7 @@ format:
 bibliography: references.bib
 csl: council-of-science-editors-brackets.csl
 title-block-banner: '#0F172A'
-#title-block-categories: true
+
 ---
 
 ::: {.callout-note appearance="simple"}
