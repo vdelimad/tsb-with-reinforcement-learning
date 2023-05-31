@@ -54,6 +54,18 @@ div.csl-indent {
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<style>
+    .quarto-title-block .quarto-title-banner,
+    .quarto-title-block .quarto-title-banner h1,
+    .quarto-title-block .quarto-title-banner h2,
+    .quarto-title-block .quarto-title-banner h3,
+    .quarto-title-block .quarto-title-banner h4,
+    .quarto-title-block .quarto-title-banner h5,
+    .quarto-title-block .quarto-title-banner h6
+    {
+      background: #0F172A;
+    }
+    </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -65,7 +77,43 @@ div.csl-indent {
 
 <body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Applying Reinforcement Learning to the Traveling Salesman Problem</h1>
+            <p class="subtitle lead">A Journey Through Asia’s Capital Cities</p>
+                      </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author">Victor De Lima </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              Georgetown University
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 27, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
@@ -81,41 +129,14 @@ div.csl-indent {
   </ul></li>
   <li><a href="#experiments-and-results" id="toc-experiments-and-results" class="nav-link" data-scroll-target="#experiments-and-results"><span class="header-section-number">4</span> Experiments and Results</a></li>
   <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">5</span> Conclusions</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6</span> References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
 </div>
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Applying Reinforcement Learning to the Traveling Salesman Problem</h1>
-<p class="subtitle lead">A Journey Through Asia’s Capital Cities</p>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Victor De Lima </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 27, 2023</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
 
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
@@ -130,8 +151,8 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<section id="abstract" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="abstract">Abstract</h2>
+<section id="abstract" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="abstract">Abstract</h3>
 <p>The Traveling Salesman Problem (TSP) is a well-studied optimization problem with a wide variety of applications and approaches to solving it. The methods and tools of Reinforcement Learning (RL) offer a distinctive strategy for approaching the TSP due to the ease with which its reward structure can be modified. Using data obtained from Skyscanner, this study examines how Q-learning, an RL technique, can optimize a travel route through 42 Asian cities. We first provide a theoretical background into the tools discussed, followed by an exposition of the methodology and experiments. The study’s results show that Q-learning is a very effective method for solving the TSP. We also discuss the model’s limitations and how it can be extended in future work.</p>
 <div id="fig-travel-agent" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -140,32 +161,33 @@ div.csl-indent {
 </figure>
 </div>
 </section>
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>Anyone who has planned a trip that involves visiting several countries will have undoubtedly found themselves wondering what is the best way to visit each location while minimizing the cost of the trip. Each location has several considerations, such as distance, cost, and the importance of visiting specific places. The question can become overwhelming with the realization that we would have to consider each country as both a potential starting point and a potential next stop from any other country. We can analyze such a scenario through the framework of the Traveling Salesman Problem (TSP). Karl Menger, one of the first to study the problem mathematically, defines the TSP as “the task to find, for finitely many points whose pairwise distances are known, the shortest route connecting the points” <span class="citation" data-cites="schrijver_history_2005">[<a href="#ref-schrijver_history_2005" role="doc-biblioref">2</a>]</span>. In other words, the goal of the TSP is to find the shortest possible route that visits every point once and then returns to the origin. The TSP is an NP-hard combinatorial optimization problem. It is simple to solve by brute force for five stops by trying all combinations (5! problem) but already impossible for 50 (50! problem).</p>
 <p>The TSP is a well-known and widely studied problem in mathematics and computer science. Beyond travel, the TSP has applications in many fields, including manufacturing, transportation, and engineering. For example, some applications that successfully employ the TSP include overhauling gas turbine engines <span class="citation" data-cites="plante_product_1987">[<a href="#ref-plante_product_1987" role="doc-biblioref">3</a>]</span>, X-Ray crystallography <span class="citation" data-cites="bland_large_1989">[<a href="#ref-bland_large_1989" role="doc-biblioref">4</a>]</span>, and computer wiring <span class="citation" data-cites="lenstra_simple_1975">[<a href="#ref-lenstra_simple_1975" role="doc-biblioref">5</a>]</span>. Although researchers have studied the TSB extensively and developed several discrete optimization techniques to solve it, Reinforcement Learning (RL) offers many advantages compared to classical optimization methods. Most importantly, RL offers a framework in which it is relatively simple to change the reward structure to adjust the optimization problem under changing circumstances.</p>
 <p>In this paper, we approach the TSP from an RL perspective and utilize Q-Learning to optimize a 42-country travel route using real prices obtained from SkyScanner. First, we discuss the theoretical background that motivates the experiment. Then, we explore the methodology and data on which we built the analysis. Next, we review the results, which show that Q-learning is a very effective method for solving the TSP. Lastly, we offer a discussion on the model’s limitations and the ways to extend the model in future research.</p>
 </section>
-<section id="related-work" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Related Work</h1>
+<section id="related-work" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="related-work"><span class="header-section-number">2</span> Related Work</h2>
 <p>The TSP is an extension of the Hamiltonian Circuit Problem, a formulation that asks whether a graph contains a cycle that visits each node exactly once, which is itself an NP-complete problem <span class="citation" data-cites="miller_reducibility_1972">[<a href="#ref-miller_reducibility_1972" role="doc-biblioref">6</a>]</span>. The TSP builds on this theory and asks what is the shortest possible Hamiltonian Circuit given a weighted graph. Furthermore, we can broadly divide the TSP into symmetric and asymmetric subcategories in the single-agent case. Given two nodes, A and B, if the costs associated with traveling from A to B are the same as those of traveling from B to A, then the TSP is symmetric. However, if the cost of traveling from A to B differs from that of traveling from B to A, then the TSP is asymmetric <span class="citation" data-cites="davendra_traveling_2010">[<a href="#ref-davendra_traveling_2010" role="doc-biblioref">7</a>]</span>.</p>
 <p>The body of literature discussing methods for solving the TSP is extensive. The base method is by brute force (also known as the Naive Approach), which consists of finding all possible route permutations. This approach becomes unfeasible as the number of locations increases. The Branch and Bound method attempts to find a solution by breaking the problem into subproblems. Each subproblem is recursively solved to find an optimal solution <span class="citation" data-cites="little_algorithm_1963">[<a href="#ref-little_algorithm_1963" role="doc-biblioref">8</a>]</span>. The Nearest Neighbor Method is also a widely used heuristic method, which relies on going to the closest location at every step and returning to the starting one once all locations have been visited <span class="citation" data-cites="johnson_traveling_1997">[<a href="#ref-johnson_traveling_1997" role="doc-biblioref">9</a>]</span>.</p>
 <p>Additionally, there are extensively studied approximate approaches, such as Simulated Annealing (SA), which is inspired by the materials science process of annealing. <span class="citation" data-cites="kirkpatrick_optimization_1983">[<a href="#ref-kirkpatrick_optimization_1983" role="doc-biblioref">10</a>]</span> initially conceived SA and consists of randomly generating an initial solution and iteratively improving it by selecting a neighboring alternative. At each step, the procedure decides whether to accept or reject the selection based on a specified criterion. Lastly, genetic algorithms (GAs) are also very popular. Starting from <span class="citation" data-cites="brady_optimization_1985">[<a href="#ref-brady_optimization_1985" role="doc-biblioref">11</a>]</span>, GAs builds on the idea of natural selection to start with a set of candidate solutions that are evaluated for “fitness.” Then, the process iterates until meeting a stopping criterion.</p>
-<p>Lastly, the TSP has also received attention from the rapid increase in reinforcement learning applications in recent decades witnessed in recent decades. Some examples worth mentioning include applying Q-learning and SARSA to optimize vehicle routes with fuel constraints <span class="citation" data-cites="ottoni_reinforcement_2022">[<a href="#ref-ottoni_reinforcement_2022" role="doc-biblioref">12</a>]</span>, and TSP involving truck-drone fleets coordination using deep reinforcement <span class="citation" data-cites="bogyrbayeva_deep_2023">[<a href="#ref-bogyrbayeva_deep_2023" role="doc-biblioref">13</a>]</span>. This study builds on this body of literature to apply Q-Leaning to a TSP flight route optimization problem in the asymmetric case.</p>
+<p>Lastly, the TSP has also received attention from the rapid increase in reinforcement learning applications in recent decades witnessed in recent decades. Some examples worth mentioning include applying Q-learning and SARSA to optimize vehicle routes with fuel constraints <span class="citation" data-cites="ottoni_reinforcement_2022">[<a href="#ref-ottoni_reinforcement_2022" role="doc-biblioref">12</a>]</span>, and TSP involving truck-drone fleets coordination using deep reinforcement learning <span class="citation" data-cites="bogyrbayeva_deep_2023">[<a href="#ref-bogyrbayeva_deep_2023" role="doc-biblioref">13</a>]</span>. This study builds on this body of literature to apply Q-Leaning to a TSP flight route optimization problem in the asymmetric case.</p>
 </section>
-<section id="methodology" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Methodology</h1>
-<section id="problem-formulation" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="problem-formulation"><span class="header-section-number">3.1</span> Problem Formulation</h2>
+<section id="methodology" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="methodology"><span class="header-section-number">3</span> Methodology</h2>
+<section id="problem-formulation" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="problem-formulation"><span class="header-section-number">3.1</span> Problem Formulation</h3>
 <p>In this paper, we employ the asymmetric case of the TSP since the costs associated with traveling from airport A to airport B are not the same as the costs of traveling from B to A, given differing fare rates. Furthermore, itineraries might include varying stopovers that lead to travel distances between the points that are not symmetrical in the model. We formulate the TSP as a set of locations <span class="math inline">\(V=\left\{v_1, \ldots \ldots, v_n\right\}\)</span>, a set of edges <span class="math inline">\(A=\{(r, s): r, s \in V\}\)</span>, and a set of costs associated with each edge <span class="math inline">\(d_{r s}=d_{s r}\)</span>, where each cost is associated with an edge <span class="math inline">\((r, s) \in A\)</span>. Since this is the asymmetric case, we allow for <span class="math inline">\(d_{r s} \neq d_{s r}\)</span> for any edge <span class="math inline">\((r, s)\)</span><span class="citation" data-cites="davendra_traveling_2010">[<a href="#ref-davendra_traveling_2010" role="doc-biblioref">7</a>]</span>.</p>
 <p>In the Q-learning framework, we aim to to learn which action to take in each location (the state). To this end, the model learns the value associated with each transition from one location to another (referred to as Q-values) by sampling the environment and repeatedly applying the&nbsp;update rule for the Q-learning algorithm:</p>
 <p><span id="eq-q-update"><span class="math display">\[
-Q(s, a) = Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right)
+\begin{align}\begin{aligned}Q(s, a) = Q(s, a) + \alpha * \\\begin{split} \left( r +\gamma \max_{a'} Q(s', a') - Q(s, a) \right)
+\end{split}\end{aligned}\end{align}
 \tag{1}\]</span></span></p>
 <p>where <span class="math inline">\(Q(s, a)\)</span> is the current estimate of the value of taking action <span class="math inline">\(a\)</span> in state <span class="math inline">\(s\)</span>, <span class="math inline">\(r\)</span> is the reward (cost) from taking an action, <span class="math inline">\(\alpha\)</span> is a learning rate hyperparameter, and <span class="math inline">\(\gamma\)</span> is a discount rate hyperparameter. States and actions denoted with the <span class="math inline">\(\prime\)</span> symbol denote the next state or action. By applying <a href="#eq-q-update">Equation&nbsp;1</a>, the model can update the existing estimates of <span class="math inline">\(Q(s, a)\)</span>. Then, the agent takes the action with the highest Q-value at every step <span class="citation" data-cites="bilgin_mastering_2020">[<a href="#ref-bilgin_mastering_2020" role="doc-biblioref">14</a>]</span>.</p>
 </section>
-<section id="data" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="data"><span class="header-section-number">3.2</span> Data</h2>
+<section id="data" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="data"><span class="header-section-number">3.2</span> Data</h3>
 <p>We obtained the initial list of target countries and coordinate data from <span class="citation" data-cites="flagpicturescom_list_2023">[<a href="#ref-flagpicturescom_list_2023" role="doc-biblioref">15</a>]</span>. North Korea, Yemen, Myanmar, Syria, Afghanistan, and Bhutan were removed from the list due to limited flight availability to their capital cities, resulting in 42 countries for the study. <a href="#fig-airport-locations">Figure&nbsp;2</a> shows the airport locations in each country.</p>
 <div class="cell" data-execution_count="2">
 <div id="fig-airport-locations" class="quarto-figure quarto-figure-center anchored">
@@ -177,8 +199,8 @@ Q(s, a) = Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \righ
 </figure>
 </div>
 </div>
-<p>We collected these countries’ flight prices, duration, and stopover data using the SkyScanner API <span class="citation" data-cites="skyscanner_api_2023">[<a href="#ref-skyscanner_api_2023" role="doc-biblioref">18</a>]</span>. We made several simplifying assumptions in the data collection. We only obtained data for the single, arbitrary date of 22 May 2023. Also, the data does not include the layover time between segments, only the in-flight time <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Lastly, the data collected only corresponds to economy cabin class only. Relaxation of these assumptions can be explored in future work.</p>
-<p>Given the 42 airports, we completed three transition matrices with 1,722 non-zero entries, each matrix corresponding to either flight price, duration, or stopover information. The entries correspond to each of the <span class="math inline">\(42 \times 42\)</span> transitions minus the diagonal, which would correspond to traveling from an airport to itself (<span class="math inline">\(42 * 42 - 42 = 1,722\)</span>). The search resulted in 38,236 segments, narrowed to 15,396 itineraries, and narrowed to the 1,722 ‘best’ flights. To choose the ‘best’ flight, we used the heuristic of valuing each flight hour at $20 and every stop over at $50, resulting in <span class="math inline">\(\rm best \, price = fare + flight \,time * 20 + stops * 50\)</span>. <a href="#fig-airport-links">Figure&nbsp;3</a> shows color-coded prices between airports.</p>
+<p>We collected these countries’ flight prices, duration, and stopover data using the SkyScanner API <span class="citation" data-cites="skyscanner_api_2023">[<a href="#ref-skyscanner_api_2023" role="doc-biblioref">18</a>]</span>. We made several simplifying assumptions in the data collection. We only obtained data for the single, arbitrary date of 22 May 2023. Also, the data does not include the layover time between segments, only the in-flight time<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Lastly, the data collected only corresponds to economy cabin class. Relaxation of these assumptions can be explored in future work.</p>
+<p>Given the 42 airports, we completed three transition matrices with 1,722 non-zero entries, each matrix corresponding to either flight price, duration, or stopover information. The entries correspond to each of the <span class="math inline">\(42 \times 42\)</span> transitions minus the diagonal, which would correspond to traveling from an airport to itself (<span class="math inline">\(42 * 42 - 42 = 1,722\)</span>). The search resulted in 38,236 segments, narrowed to 15,396 itineraries, and narrowed to the 1,722 ‘best’ flights. To choose the ‘best’ flight, we used the heuristic of valuing each flight hour at $20 and every stopover at $50, resulting in <span class="math inline">\(\rm best \, price = fare + flight \,time * 20 + stops * 50\)</span>. <a href="#fig-airport-links">Figure&nbsp;3</a> shows color-coded prices between airports.</p>
 <div class="cell" data-execution_count="3">
 <div id="fig-airport-links" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -191,8 +213,8 @@ Q(s, a) = Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \righ
 </div>
 </section>
 </section>
-<section id="experiments-and-results" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Experiments and Results</h1>
+<section id="experiments-and-results" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="experiments-and-results"><span class="header-section-number">4</span> Experiments and Results</h2>
 <p>We implemented the model in Python using custom classes and functions. The model was based on the <span class="citation" data-cites="alves_da_costa_delivery_2019">[<a href="#ref-alves_da_costa_delivery_2019" role="doc-biblioref">19</a>]</span> implementation, particularly on the method for tracking previously visited locations and preventing revisiting them. The model constructed a matrix of Q-values of size <span class="math inline">\(42 \times 42\)</span> and employed an e-greedy strategy with epsilon decay at a rate of 0.999. Finally, we ran the model through 200 episodes of Q-learning, with results available in <a href="#fig-experiment-results">Figure&nbsp;4</a>.</p>
 <div id="fig-experiment-results" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -256,18 +278,18 @@ Q(s, a) = Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \righ
 </figure>
 </div>
 </section>
-<section id="conclusions" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Conclusions</h1>
+<section id="conclusions" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="conclusions"><span class="header-section-number">5</span> Conclusions</h2>
 <p>This study began by explaining the TSP and motivated the use of RL as a method for solving it. Then we reviewed the TSP literature and the wide variety of existing solutions, including heuristic, approximate, and RL methods. We then formalized the problem and explained how the Q-learning process works. Next, we covered how the data for the experiment was collected, the assumptions made, and visualized the search space. Lastly, we discussed the results from the experiment showing that Q-learning is a very effective method for solving the TSP, achieving significant gains in cost reduction and time minimization for the desired route through the Asian cities.</p>
 <p>Future work may include the relaxation of several assumptions made in this implementation. For example, future implementations may include additional data to capture varying prices across the expected duration of the trip rather than utilizing prices from a single date. Also, more complicated choices of ‘best’ flight may be considered to explore their impact on the model.</p>
 </section>
-<section id="references" class="level1 unnumbered" data-number="6">
+<section id="references" class="level2 unnumbered">
 
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">6 References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
 <div id="ref-stability_ai_stable_2023" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">Stability AI. Stable <span>Diffusion</span> 2-1. Hugging Face. 2023 [accessed 2023 Apr 25]. <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion">https://huggingface.co/spaces/stabilityai/stable-diffusion</a></div>
 </div>
@@ -328,7 +350,7 @@ Q(s, a) = Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') - Q(s, a) \righ
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>For clarification, we cannot take the difference between the first segment departure and last segment arrival to calculate the total itinerary time because they flight data is provided in local time, which would not account for time zone changes.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>For clarification, we cannot take the difference between the first segment departure and last segment arrival to calculate the total itinerary time because flight data is provided in local time, which would not account for time zone changes.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main>
 <!-- /main column -->
