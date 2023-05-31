@@ -1,0 +1,19 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+/*-- h1, h2, h3, h4, h5, h6 {
+  font-size: 100px !important;
+} --*/
+
+
+// Change background color
+:root {
+  --bs-body-bg: #0F172A;
+}
+.fullcontent {
+  background-color: var(--bs-body-bg) !important;
+}
+div#quarto-appendix.default {
+  background-color: var(--bs-body-bg) !important;
+}
