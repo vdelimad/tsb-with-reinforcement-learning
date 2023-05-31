@@ -15,7 +15,8 @@ format:
     number-sections: true
     code-line-numbers: true
     highlight-style: github
-bibliography: ../Resources/council-of-science-editors-brackets.csl
+bibliography: references.bib
+csl: council-of-science-editors-brackets.csl
 ---
 
 ::: {.callout-note appearance="simple"}
@@ -83,7 +84,7 @@ We obtained the initial list of target countries and coordinate data from @flagp
 ```{python}
 #| echo: false
 #| label: fig-airport-locations
-#| fig-cap: Interactive Folium world map with overlay over Asia showing the capital cities of interest, with a tile by @national_geographic_esrinatgeoworldmap_2023 and administrative boundaries from @opendatasoft_world_2022.
+#| fig-cap: 'Interactive Folium world map with overlay over Asia showing the capital cities of interest, with a tile by @national_geographic_esrinatgeoworldmap_2023 and administrative boundaries from @opendatasoft_world_2022. **Note**: VPNs may prevent correct map rendering.'
 
 width_percentage = "100%"
 IFrame(src='resources/Outputs/Plots/map_of_airport_locations.html', width=width_percentage, height=500)
@@ -98,7 +99,7 @@ Given the 42 airports, we completed three transition matrices with 1,722 non-zer
 ```{python}
 #| echo: false
 #| label: fig-airport-links
-#| fig-cap: Interactive Folium world map showing the links between airports with color-coded prices.
+#| fig-cap: 'Interactive Folium world map showing the links between airports with color-coded prices. **Note**: VPNs may prevent correct map rendering.'
 
 width_percentage = "100%"
 IFrame(src='resources/Outputs/Plots/map_of_airport_links.html', width=width_percentage, height=500)
@@ -136,7 +137,7 @@ Furthermore, @fig-first-and-last-episodes shows the chosen trajectories for the 
 ```{python}
 #| echo: false
 #| label: fig-first-episode-links
-#| fig-cap: Shows the first episode's links
+#| fig-cap: "Shows the first episode's links. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
 IFrame(src='resources/Outputs/Plots/first_episode_links.html', width=width_percentage, height=500)
@@ -145,7 +146,7 @@ IFrame(src='resources/Outputs/Plots/first_episode_links.html', width=width_perce
 ```{python}
 #| echo: false
 #| label: fig-last-episode-links
-#| fig-cap: Shows the last episode's links
+#| fig-cap: "Shows the last episode's links. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
 IFrame(src='resources/Outputs/Plots/last_episode_links.html', width=width_percentage, height=500)
