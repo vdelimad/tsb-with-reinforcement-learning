@@ -103,8 +103,8 @@ We collected these countries' flight prices, duration, and stopover data using t
 Given the 42 airports, we completed three transition matrices with 1,722 non-zero entries, each matrix corresponding to either flight price, duration, or stopover information. The entries correspond to each of the $42 \times 42$ transitions minus the diagonal, which would correspond to traveling from an airport to itself ($42 * 42 - 42 = 1,722$). The search resulted in 38,236 segments, narrowed to 15,396 itineraries, and narrowed to the 1,722 'best' flights. To choose the ‘best’ flight, we used the heuristic of valuing each flight hour at $20 and every stopover at $50, resulting in:
 
 $$ 
-\begin{align}\begin{aligned} \rm best \, price =  fare + flight \,time * 20 \\\begin{split} \rm + stops * 50 
-\end{split}\end{aligned}\end{align} 
+\begin{flalign}\begin{aligned} \rm best \, price =  fare + flight \,time  \\\begin{split} \rm * 20 + stops * 50 
+\end{split}\end{aligned}\end{flalign} 
 $$ {#eq-best-flight}
 
 
