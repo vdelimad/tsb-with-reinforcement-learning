@@ -10,9 +10,6 @@ abstract: "The Traveling Salesman Problem (TSP) is a well-studied optimization p
 categories: [portfolio-projects]
 format:
   html:
-    #theme:
-    #  - lumen
-    #  - custom.scss
     toc: true
     code-copy: true
     number-sections: true
@@ -20,11 +17,10 @@ format:
     highlight-style: github
 bibliography: assets/references.bib
 csl: assets/council-of-science-editors-brackets.csl
-
-
 ---
 
 ::: {.callout-note appearance="simple"}
+
 All code used in this report is publicly available on [GitHub](https://github.com/vdelimad/tsb-with-reinforcement-learning).
 
 ::: 
