@@ -19,8 +19,8 @@ format:
     number-sections: true
     code-line-numbers: true
     highlight-style: github
-bibliography: assets/references.bib
-csl: assets/council-of-science-editors-brackets.csl
+bibliography: references.bib
+csl: council-of-science-editors-brackets.csl
 
 
 ---
@@ -91,7 +91,7 @@ We obtained the initial list of target countries and coordinate data from @flagp
 #| fig-cap: "Interactive Folium world map with overlay over Asia showing the capital cities of interest, with a tile by @national_geographic_esrinatgeoworldmap_2023 and administrative boundaries from @opendatasoft_world_2022. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
-IFrame(src='assets/resources/Outputs/Plots/map_of_airport_locations.html', width=width_percentage, height=500)
+IFrame(src='resources/Outputs/Plots/map_of_airport_locations.html', width=width_percentage, height=500)
 ```
 
 
@@ -114,7 +114,7 @@ $$ {#eq-best-flight}
 #| fig-cap: "Interactive Folium world map showing the links between airports with color-coded prices. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
-IFrame(src='assets/resources/Outputs/Plots/map_of_airport_links.html', width=width_percentage, height=500)
+IFrame(src='resources/Outputs/Plots/map_of_airport_links.html', width=width_percentage, height=500)
 ```
 
 
@@ -124,13 +124,13 @@ We implemented the model in Python using custom classes and functions. The model
 
 
 ::: {#fig-experiment-results}
-![Flight Score Results](assets/resources/Outputs/Plots/flight_score.png){#fig-score-results fig-align="center" width=85%}
+![Flight Score Results](resources/Outputs/Plots/flight_score.png){#fig-score-results fig-align="center" width=85%}
 
-![Fare Expense Results](assets/resources/Outputs/Plots/fares_in_usd.png){#fig-expense-results fig-align="center" width=85%}
+![Fare Expense Results](resources/Outputs/Plots/fares_in_usd.png){#fig-expense-results fig-align="center" width=85%}
 
-![Flight Time Results](assets/resources/Outputs/Plots/flight_time.png){#fig-time-results fig-align="center" width=85%}
+![Flight Time Results](resources/Outputs/Plots/flight_time.png){#fig-time-results fig-align="center" width=85%}
 
-![Flight Stops Results](assets/resources/Outputs/Plots/flight_stops.png){#fig-stops-results fig-align="center" width=85%}
+![Flight Stops Results](resources/Outputs/Plots/flight_stops.png){#fig-stops-results fig-align="center" width=85%}
 
 Experiment Results
 :::
@@ -152,7 +152,7 @@ Furthermore, @fig-first-and-last-episodes shows the chosen trajectories for the 
 #| fig-cap: "Shows the first episode's links. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
-IFrame(src='assets/resources/Outputs/Plots/first_episode_links.html', width=width_percentage, height=500)
+IFrame(src='resources/Outputs/Plots/first_episode_links.html', width=width_percentage, height=500)
 ```
 
 ```{python}
@@ -161,7 +161,7 @@ IFrame(src='assets/resources/Outputs/Plots/first_episode_links.html', width=widt
 #| fig-cap: "Shows the last episode's links. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
-IFrame(src='assets/resources/Outputs/Plots/last_episode_links.html', width=width_percentage, height=500)
+IFrame(src='resources/Outputs/Plots/last_episode_links.html', width=width_percentage, height=500)
 ```
 
 Trayectories of the first and last episodes.
