@@ -6,11 +6,14 @@ author:
     affiliations:
       - name: Georgetown University
 date: '2023-04-27'
+abstract: |
+  The Traveling Salesman Problem (TSP) is a well-studied optimization problem with a wide variety of applications and approaches to solving it. The methods and tools of Reinforcement Learning (RL) offer a distinctive strategy for approaching the TSP due to the ease with which its reward structure can be modified. Using data obtained from Skyscanner, this study examines how Q-learning, an RL technique, can optimize a travel route through 42 Asian cities. We first provide a theoretical background into the tools discussed, followed by an exposition of the methodology and experiments. The study's results show that Q-learning is a very effective method for solving the TSP. We also discuss the model's limitations and how it can be extended in future work.
+categories: [portfolio-projects]
 format:
   html:
-    theme:
-      - lumen
-      - custom.scss
+    #theme:
+    #  - lumen
+    #  - custom.scss
     toc: true
     code-copy: true
     number-sections: true
@@ -18,20 +21,14 @@ format:
     highlight-style: github
 bibliography: references.bib
 csl: council-of-science-editors-brackets.csl
-title-block-banner: '#0F172A'
+#title-block-banner: '#0F172A'
 
 ---
 
 ::: {.callout-note appearance="simple"}
-* All code used in this report is publicly available on [GitHub](https://github.com/vdelimad/tsb-with-reinforcement-learning).
-* To explore more of my work, please visit my [website](https://victordelima.com/).
+All code used in this report is publicly available on [GitHub](https://github.com/vdelimad/tsb-with-reinforcement-learning).
 
 ::: 
-
-
-### Abstract {.unnumbered}
-
-The Traveling Salesman Problem (TSP) is a well-studied optimization problem with a wide variety of applications and approaches to solving it. The methods and tools of Reinforcement Learning (RL) offer a distinctive strategy for approaching the TSP due to the ease with which its reward structure can be modified. Using data obtained from Skyscanner, this study examines how Q-learning, an RL technique, can optimize a travel route through 42 Asian cities. We first provide a theoretical background into the tools discussed, followed by an exposition of the methodology and experiments. The study's results show that Q-learning is a very effective method for solving the TSP. We also discuss the model's limitations and how it can be extended in future work.
 
 
 
