@@ -8,7 +8,6 @@ author:
 date: '2023-04-27'
 abstract: |
   The Traveling Salesman Problem (TSP) is a well-studied optimization problem with a wide variety of applications and approaches to solving it. The methods and tools of Reinforcement Learning (RL) offer a distinctive strategy for approaching the TSP due to the ease with which its reward structure can be modified. Using data obtained from Skyscanner, this study examines how Q-learning, an RL technique, can optimize a travel route through 42 Asian cities. We first provide a theoretical background into the tools discussed, followed by an exposition of the methodology and experiments. The study's results show that Q-learning is a very effective method for solving the TSP. We also discuss the model's limitations and how it can be extended in future work.
-#image: resources/Images/TravelAgents/travel_agent_1.jpeg
 categories: [portfolio-projects]
 format:
   html:
@@ -20,8 +19,8 @@ format:
     number-sections: true
     code-line-numbers: true
     highlight-style: github
-bibliography: references.bib
-csl: council-of-science-editors-brackets.csl
+bibliography: assets/references.bib
+csl: assets/council-of-science-editors-brackets.csl
 #title-block-banner: '#0F172A'
 
 ---
@@ -41,7 +40,7 @@ from IPython.display import display, HTML, IFrame
 ```
 
 
-![Picture of a robot travel agent generated with Stable Diffusion [@stability_ai_stable_2023] using prompt "_a friendly-looking humanoid robot travel agent greeting you on its work desk and a map hanging in the back wall_"](resources/Images/TravelAgents/travel_agent_1.jpeg){#fig-travel-agent fig-align="center" width=75%}
+![Picture of a robot travel agent generated with Stable Diffusion [@stability_ai_stable_2023] using prompt "_a friendly-looking humanoid robot travel agent greeting you on its work desk and a map hanging in the back wall_"](assets/resources/Images/TravelAgents/travel_agent_1.jpeg){#fig-travel-agent fig-align="center" width=75%}
 
 
 ## Introduction
@@ -92,7 +91,7 @@ We obtained the initial list of target countries and coordinate data from @flagp
 #| fig-cap: "Interactive Folium world map with overlay over Asia showing the capital cities of interest, with a tile by @national_geographic_esrinatgeoworldmap_2023 and administrative boundaries from @opendatasoft_world_2022. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
-IFrame(src='resources/Outputs/Plots/map_of_airport_locations.html', width=width_percentage, height=500)
+IFrame(src='assets/resources/Outputs/Plots/map_of_airport_locations.html', width=width_percentage, height=500)
 ```
 
 
@@ -115,7 +114,7 @@ $$ {#eq-best-flight}
 #| fig-cap: "Interactive Folium world map showing the links between airports with color-coded prices. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
-IFrame(src='resources/Outputs/Plots/map_of_airport_links.html', width=width_percentage, height=500)
+IFrame(src='assets/resources/Outputs/Plots/map_of_airport_links.html', width=width_percentage, height=500)
 ```
 
 
@@ -125,13 +124,13 @@ We implemented the model in Python using custom classes and functions. The model
 
 
 ::: {#fig-experiment-results}
-![Flight Score Results](resources/Outputs/Plots/flight_score.png){#fig-score-results fig-align="center" width=85%}
+![Flight Score Results](assets/resources/Outputs/Plots/flight_score.png){#fig-score-results fig-align="center" width=85%}
 
-![Fare Expense Results](resources/Outputs/Plots/fares_in_usd.png){#fig-expense-results fig-align="center" width=85%}
+![Fare Expense Results](assets/resources/Outputs/Plots/fares_in_usd.png){#fig-expense-results fig-align="center" width=85%}
 
-![Flight Time Results](resources/Outputs/Plots/flight_time.png){#fig-time-results fig-align="center" width=85%}
+![Flight Time Results](assets/resources/Outputs/Plots/flight_time.png){#fig-time-results fig-align="center" width=85%}
 
-![Flight Stops Results](resources/Outputs/Plots/flight_stops.png){#fig-stops-results fig-align="center" width=85%}
+![Flight Stops Results](assets/resources/Outputs/Plots/flight_stops.png){#fig-stops-results fig-align="center" width=85%}
 
 Experiment Results
 :::
@@ -153,7 +152,7 @@ Furthermore, @fig-first-and-last-episodes shows the chosen trajectories for the 
 #| fig-cap: "Shows the first episode's links. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
-IFrame(src='resources/Outputs/Plots/first_episode_links.html', width=width_percentage, height=500)
+IFrame(src='assets/resources/Outputs/Plots/first_episode_links.html', width=width_percentage, height=500)
 ```
 
 ```{python}
@@ -162,7 +161,7 @@ IFrame(src='resources/Outputs/Plots/first_episode_links.html', width=width_perce
 #| fig-cap: "Shows the last episode's links. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
-IFrame(src='resources/Outputs/Plots/last_episode_links.html', width=width_percentage, height=500)
+IFrame(src='assets/resources/Outputs/Plots/last_episode_links.html', width=width_percentage, height=500)
 ```
 
 Trayectories of the first and last episodes.
