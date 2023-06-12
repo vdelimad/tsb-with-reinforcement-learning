@@ -1,6 +1,6 @@
 ---
-title: Applying Reinforcement Learning to the Traveling Salesman Problem
-subtitle: A Journey Through Asia's Capital Cities
+title: "Applying Reinforcement Learning to the Traveling Salesman Problem"
+subtitle: "A Journey Through Asia's Capital Cities"
 author:
   - name: Victor De Lima
     affiliations:
