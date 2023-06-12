@@ -21,7 +21,7 @@ format:
     highlight-style: github
 bibliography: assets/references.bib
 csl: assets/council-of-science-editors-brackets.csl
-#title-block-banner: '#0F172A'
+
 
 ---
 
