@@ -40,7 +40,7 @@ from IPython.display import display, HTML, IFrame
 ```
 
 
-![Picture of a robot travel agent generated with Stable Diffusion [@stability_ai_stable_2023] using prompt "_a friendly-looking humanoid robot travel agent greeting you on its work desk and a map hanging in the back wall_"](assets/resources/Images/TravelAgents/travel_agent_1.jpeg){#fig-travel-agent fig-align="center" width=75%}
+![Picture of a robot travel agent generated with Stable Diffusion [@stability_ai_stable_2023] using prompt "_a friendly-looking humanoid robot travel agent greeting you on its work desk and a map hanging in the back wall_"](resources/Images/TravelAgents/travel_agent_1.jpeg){#fig-travel-agent fig-align="center" width=75%}
 
 
 ## Introduction
