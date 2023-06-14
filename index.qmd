@@ -1,6 +1,5 @@
 ---
 title: "Applying Reinforcement Learning to the Traveling Salesman Problem"
-subtitle: "A Journey Through Asia's Capital Cities"
 author:
   - name: Victor De Lima
     affiliations:
@@ -42,11 +41,11 @@ from IPython.display import display, HTML, IFrame
 
 ## Introduction
 
-Anyone who has planned a trip that involves visiting several countries will have undoubtedly found themselves wondering what is the best way to visit each location while minimizing the cost of the trip. Each location has several considerations, such as distance, cost, and the importance of visiting specific places. The question can become overwhelming with the realization that we would have to consider each country as both a potential starting point and a potential next stop from any other country. We can analyze such a scenario through the framework of the Traveling Salesman Problem (TSP). Karl Menger, one of the first to study the problem mathematically, defines the TSP as "the task to find, for finitely many points whose pairwise distances are known, the shortest route connecting the points" [@schrijver_history_2005]. In other words, the goal of the TSP is to find the shortest possible route that visits every point once and then returns to the origin. The TSP is an NP-hard combinatorial optimization problem. It is simple to solve by brute force for five stops by trying all combinations (5! problem) but already impossible for 50 (50! problem).
+Anyone who has planned a trip that involves visiting several cities will have undoubtedly found themselves wondering what is the best way to visit each location while minimizing the cost of the trip. Each location has several considerations, such as distance, cost, and the importance of visiting specific places. The question can become overwhelming with the realization that we would have to consider each city as both a potential starting point and a potential next stop from any other city. We can analyze such a scenario through the framework of the Traveling Salesman Problem (TSP). Karl Menger, one of the first to study the problem mathematically, defines the TSP as "the task to find, for finitely many points whose pairwise distances are known, the shortest route connecting the points" [@schrijver_history_2005]. In other words, the goal of the TSP is to find the shortest possible route that visits every point once and then returns to the origin. The TSP is an NP-hard combinatorial optimization problem. It is simple to solve by brute force for five stops by trying all combinations (5! problem) but already impossible for 50 (50! problem).
  
 The TSP is a well-known and widely studied problem in mathematics and computer science. Beyond travel, the TSP has applications in many fields, including manufacturing, transportation, and engineering. For example, some applications that successfully employ the TSP include overhauling gas turbine engines [@plante_product_1987], X-Ray crystallography [@bland_large_1989], and computer wiring [@lenstra_simple_1975]. Although researchers have studied the TSB extensively and developed several discrete optimization techniques to solve it, Reinforcement Learning (RL) offers many advantages compared to classical optimization methods. Most importantly, RL offers a framework in which it is relatively simple to change the reward structure to adjust the optimization problem under changing circumstances.
 
-In this paper, we approach the TSP from an RL perspective and utilize Q-Learning to optimize a 42-country travel route using real prices obtained from SkyScanner. First, we discuss the theoretical background that motivates the experiment. Then, we explore the methodology and data on which we built the analysis. Next, we review the results, which show that Q-learning is a very effective method for solving the TSP. Lastly, we offer a discussion on the model's limitations and the ways to extend the model in future research.
+In this paper, we approach the TSP from an RL perspective and utilize Q-Learning to optimize a 42-city travel route using real prices obtained from SkyScanner. First, we discuss the theoretical background that motivates the experiment. Then, we explore the methodology and data on which we built the analysis. Next, we review the results, which show that Q-learning is a very effective method for solving the TSP. Lastly, we offer a discussion on the model's limitations and the ways to extend the model in future research.
 
 
 ## Related Work
@@ -79,20 +78,20 @@ where $Q(s, a)$ is the current estimate of the value of taking action $a$ in sta
 
 ### Data
 
-We obtained the initial list of target countries and coordinate data from @flagpicturescom_list_2023. North Korea, Yemen, Myanmar, Syria, Afghanistan, and Bhutan were removed from the list due to limited flight availability to their capital cities, resulting in 42 countries for the study. @fig-airport-locations shows the airport locations in each country.
+We obtained the initial list of target cities and coordinate data from @flagpicturescom_list_2023. Pyongyang, Sanaa, Rangoon, Damascus, Kabul, and Thimphu were removed from the list due to limited flight availability, resulting in 42 cities for the study. @fig-airport-locations shows the airport locations in each city.
 
 
 ```{python}
 #| echo: false
 #| label: fig-airport-locations
-#| fig-cap: "Interactive Folium world map with overlay over Asia showing the capital cities of interest, with a tile by @national_geographic_esrinatgeoworldmap_2023 and administrative boundaries from @opendatasoft_world_2022. **Note**: VPNs may prevent correct map rendering."
+#| fig-cap: "Interactive Folium world map with overlay over Asia showing the cities of interest, with a tile by @national_geographic_esrinatgeoworldmap_2023 and administrative boundaries from @opendatasoft_world_2022. **Note**: VPNs may prevent correct map rendering."
 
 width_percentage = "100%"
 IFrame(src='assets/resources/Outputs/Plots/map_of_airport_locations.html', width=width_percentage, height=500)
 ```
 
 
-We collected these countries' flight prices, duration, and stopover data using the SkyScanner API [@skyscanner_api_2023]. We made several simplifying assumptions in the data collection. We only obtained data for the single, arbitrary date of 22 May 2023. Also, the data does not  include the layover time between segments, only the in-flight time^[For clarification, we cannot take the difference between the first segment departure and last segment arrival to calculate the total itinerary time because flight data is provided in local time, which would not account for time zone changes.]. Lastly, the data collected only corresponds to economy cabin class. Relaxation of these assumptions can be explored in future work.
+We collected these cities' flight prices, duration, and stopover data using the SkyScanner API [@skyscanner_api_2023]. We made several simplifying assumptions in the data collection. We only obtained data for the single, arbitrary date of 22 May 2023. Also, the data does not  include the layover time between segments, only the in-flight time^[For clarification, we cannot take the difference between the first segment departure and last segment arrival to calculate the total itinerary time because flight data is provided in local time, which would not account for time zone changes.]. Lastly, the data collected only corresponds to economy cabin class. Relaxation of these assumptions can be explored in future work.
 
 Given the 42 airports, we completed three transition matrices with 1,722 non-zero entries, each matrix corresponding to either flight price, duration, or stopover information. The entries correspond to each of the $42 \times 42$ transitions minus the diagonal, which would correspond to traveling from an airport to itself ($42 * 42 - 42 = 1,722$). The search resulted in 38,236 segments, narrowed to 15,396 itineraries, and narrowed to the 1,722 'best' flights. To choose the ‘best’ flight, we used the heuristic of valuing each flight hour at $20 and every stopover at $50, resulting in:
 
