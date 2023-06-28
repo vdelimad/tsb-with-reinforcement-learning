@@ -55,7 +55,7 @@ The TSP is an extension of the Hamiltonian Circuit Problem, a formulation that a
 The body of literature discussing methods for solving the TSP is extensive. The base method is by brute force (also known as the Naive Approach), which consists of finding all possible route permutations. This approach becomes unfeasible as the number of locations increases. The Branch and Bound method attempts to find a solution by breaking the problem into subproblems. Each subproblem is recursively solved to find an optimal solution [@little_algorithm_1963]. The Nearest Neighbor Method is also a widely used heuristic method, which relies on going to the closest location at every step and returning to the starting one once all locations have been visited [@johnson_traveling_1997].
 
 
-Additionally, there are extensively studied approximate approaches, such as Simulated Annealing (SA), which is inspired by the materials science process of annealing. @kirkpatrick_optimization_1983 initially conceived SA and consists of randomly generating an initial solution and iteratively improving it by selecting a neighboring alternative. At each step, the procedure decides whether to accept or reject the selection based on a specified criterion. Lastly, genetic algorithms (GAs) are also very popular. Starting from @brady_optimization_1985, GAs builds on the idea of natural selection to start with a set of candidate solutions that are evaluated for "fitness." Then, the process iterates until meeting a stopping criterion.
+Additionally, there are extensively studied approximate approaches, such as Simulated Annealing (SA), which is inspired by the materials science process of annealing. @kirkpatrick_optimization_1983 initially conceived SA and consists of randomly generating an initial solution and iteratively improving it by selecting a neighboring alternative. At each step, the procedure decides whether to accept or reject the selection based on a specified criterion. Lastly, genetic algorithms (GAs) are also very popular. Starting from @brady_optimization_1985, GAs build on the idea of natural selection to start with a set of candidate solutions that are evaluated for "fitness." Then, the process iterates until meeting a stopping criterion.
 
 Lastly, the TSP has also received attention from the rapid increase in reinforcement learning applications in recent decades witnessed in recent decades. Some examples worth mentioning include applying Q-learning and SARSA to optimize vehicle routes with fuel constraints @ottoni_reinforcement_2022, and TSP involving truck-drone fleets coordination using deep reinforcement learning @bogyrbayeva_deep_2023. This study builds on this body of literature to apply Q-Leaning to a TSP flight route optimization problem in the asymmetric case.
 
@@ -136,10 +136,10 @@ The results obtained had several important improvements from the initial randomn
 
 - Decreasing overall flight expenditure from around $18,000 to $8000
 - Decreasing overall flight expenditure from around 20,000 minutes (333.3 hours or 7.93 average hours per flight) to 9000 (133.3 hours or 3.17 average hours per flight)
-- Decreasing overall stopover expenditure from around 100 to 60.
+- Decreasing overall stopovers from around 100 to 60.
 
 
-Furthermore, @fig-first-and-last-episodes shows the chosen trajectories for the first and last episodes, allowing us to observe the choice changes from the untrained and trained models. t is challenging to discern the disparities between these figures through mere observation, underscoring the model's proficiency in revealing mathematical advantages that may otherwise be arduous to infer by visual inspection alone.
+Furthermore, @fig-first-and-last-episodes shows the chosen trajectories for the first and last episodes, allowing us to observe the choice changes from the untrained and trained models. It is challenging to discern the disparities between these figures through mere observation, underscoring the model's proficiency in revealing mathematical advantages that may otherwise be arduous to infer by visual inspection alone.
 
 ::: {#fig-first-and-last-episodes layout-ncols=1}
 ```{python}
